@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <title><%= current_page.data.title || "Pandya Family Foundation" %></title>
+    <%= stylesheet_link_tag "css/bootstrap.css" %>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row" style="padding: 20px">
+        <img src="img/logo-notext.jpg"/>
+      </div>
+      <div class="row">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#our-work-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Pandya Family Foundation</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="our-work-collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Our Work<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Breast Cancer Awareness, Patan, Gujarat May 2008</a></li>
+                    <li><a href="#">Breast Cancer Awareness, Patan, Gujarat Oct 2008</a></li>
+                    <li><a href="#">Cameroon, 2008</a></li>
+                    <li><a href="#">Health Screeings, Rural Gujarat 2009</a></li>
+                    <li><a href="#">Rotary, 2009-2010</a></li>
+                    <li><a href="#">Shamlaji, Gujarat, 2011</a></li>
+                    <li><a href="#">Disaster Preparedness, 2012</a></li>
+                    <li><a href="#">Walk with a Doc, 2013</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Partners</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <%= yield %>
+        </div>
+
+        <div class="col-md-4 well well-sm">
+          <h4>How you can help</h4>
+          <p>We are supported by the generosity of people like you. PFF is a 
+          <a href="https://en.wikipedia.org/wiki/501(c)_organization#501.28c.29.283.29">
+           501(c)(3) corporation</a> with the Federal Tax ID#20-5484071.</p>
+
+          <p>Please make a tax-deductible contribution to help us continue our work.</p>
+
+          <p align="center">
+            <button type="button" class="btn btn-primary">Facebook Page</button>
+            <button type="button" class="btn btn-warning">Donate with PayPal</button>
+          </p>
+
+          &nbsp;
+          <h4>Members of the Board</h4>
+          <ul class="list-group">
+            <li class="list-group-item">Gaurang Pandya, M.D.</li>
+            <li class="list-group-item">Betty Bluekle, CPA</li>
+            <li class="list-group-item">Anna Green, Executive Director, Central California Family Crisis Center</li>
+            <li class="list-group-item">Mickie Manning, Former Executive Director, Central California Family Crisis Center</li>
+          </ul>
+
+          &nbsp;
+          <h4>Contact</h4>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Pandya Family Foundation<br/>
+              555 W. Putnam Ave<br/>
+              Porterville, CA 93257<br/>
+              <b>Tel:</b> (559) 782-8533<br/>
+              <b>Email:</b> <a href="mailto:elapandya@gmail.com">elapandya@gmail.com</a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%= javascript_include_tag  "http://code.jquery.com/jquery-latest.js" %>
+    <%= javascript_include_tag  "js/bootstrap.min.js" %>
+  </body>
+</html>
