@@ -1,0 +1,43 @@
+/* Parent container for the entire gallery */
+.dg-image-gallery{position:relative;width:98%;height:590px;border:1px solid #AAA;padding:2px;background:#000;}
+/* Enlarged image */
+.dg-image-gallery-enlarged-image {position:absolute;left:0px;top:0px;background-position:center center;width:100%;height:315px;padding-top:160px;}
+/* Caption below large image */
+.dg-image-gallery-caption {position:absolute;bottom:90px;width:84%;color:#fff;font-family:arial; font-size:12px;margin-left:15px;height:30px;}
+/* Container for all thumbnails */
+.dg-image-gallery-thumbnail-container {position:absolute;bottom:0px;width:94%;left:20px;padding-bottom:2px;/* height:???;- is set by the script based on property thumb height */
+}
+/* Thumbnails inside thumbnail strip */
+.dg-image-gallery-thumbnail{width:80px;height:80px;padding:0;margin-right:4px;border:1px solid #bbb;}
+
+/* Highlight element */
+.dg-image-gallery-thumbnail-highlight{border:1px solid #CCC;padding:0;margin-right:4px;}
+
+/* Previous and next buttons */
+
+.dg-image-gallery-previous, .dg-image-gallery-next {background-position:center center; cursor:pointer; width:20px;height:80px;bottom:0;position:absolute;cursor:pointer;}
+.dg-image-gallery-previous{background-image:url('../images/left.png');left:0px;}
+.dg-image-gallery-previous-over{background-image:url('../images/left-over.png');}
+.dg-image-gallery-next{background-image:url('../images/right.png');right:0px;}
+.dg-image-gallery-next-over{background-image:url('../images/right-over.png');}
+
+/** Autoplay buttons */
+.dg-image-gallery-next-autoplay-container{position:absolute;right:0px;top:320px;z-index:20000;width:60px;display:none;}
+.dg-image-gallery-next-autoplay-start, .dg-image-gallery-next-autoplay-stop{position:absolute;top:0px;color:#CCC;padding:5px;height:20px;width:30px;text-align:right;background-repeat:no-repeat;cursor:pointer;}
+.dg-image-gallery-next-autoplay-start{left:0px;background-image:url('../images/play.png');}
+.dg-image-gallery-next-autoplay-stop{left:30px;background-image:url('../images/pause.png');}
+.dg-image-gallery-next-autoplay-start-off{background-image:url('../images/play-off.png');cursor:default;}
+.dg-image-gallery-next-autoplay-stop-off{background-image:url('../images/pause-off.png');cursor:default;}
+
+
+.dg-image-gallery-previous{background-image:url('../images/left-white.png');left : 0px;}
+.dg-image-gallery-previous-over{background-image:url('../images/left-white-over.png');}
+.dg-image-gallery-next{background-image:url('../images/right-white.png');right : 0px;}
+.dg-image-gallery-next-over{background-image:url('../images/right-white-over.png');}
+.dg-image-gallery-next-autoplay-start{background-image:url('../images/play-white.png');}
+.dg-image-gallery-next-autoplay-stop{background-image:url('../images/pause-white.png');}
+.dg-image-gallery-next-autoplay-start-off{background-image:url('../images/play-white-off.png');}
+.dg-image-gallery-next-autoplay-stop-off{background-image:url('../images/pause-white-off.png');}
+.dg-image-gallery-caption {color:#fff;}
+
+.dg-image-gallery h2{margin:0;padding:0;}

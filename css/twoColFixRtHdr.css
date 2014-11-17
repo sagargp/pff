@@ -1,0 +1,59 @@
+@charset "utf-8";body  {font:90%;background:#479;margin:0;/* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding:0;text-align:center;/* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color:#000000;background-image:url(../images/bg.jpg);background-repeat:repeat-x;font-family:Verdana, Geneva, sans-serif;}
+.twoColFixRtHdr #container {width:760px;/* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	background:#FFFFFF;margin:0 auto;/* the auto margins (in conjunction with a width) center the page */
+	border:1px solid #000000;text-align:left;/* this overrides the text-align:center on the body element. */} 
+.twoColFixRtHdr #header {background:#ffffff;padding:0;/* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+	height:151px;text-align:right;} 
+.twoColFixRtHdr #header h1 {margin:0;/* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding:10px 0;/* using padding instead of margin will allow you to keep the element away from the edges of the div */}
+.twoColFixRtHdr #sidebar1 {float:right;/* since this element is floated, a width must be given */
+	width:200px;/* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
+	background:#EBEBEB;/* the background color will be displayed for the length of the content in the column, but no further */
+	padding:5px 10px 15px;font-size:90%;border-left-style:dashed;border-left-width:2px;border-left-color:#BB6;}
+.twoColFixRtHdr #mainContent {margin:0 250px 0 0;/* the right margin on this div element creates the column down the right side of the page - no matter how much content the sidebar1 div contains, the column space will remain. You can remove this margin if you want the #mainContent div's text to fill the #sidebar1 space when the content in #sidebar1 ends. */
+	padding:0 20px;/* remember that padding is the space inside the div box and margin is the space outside the div box */} 
+.twoColFixRtHdr #footer {padding:0 10px 0 20px;/* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:#DDa;} 
+.twoColFixRtHdr #footer p {margin:0;/* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding:10px 0;/* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+	letter-spacing:.05em;}
+.fltrt {/* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float:right;margin-left:8px;}
+.fltlft {/* this class can be used to float an element left in your page */
+	float:left;margin-right:8px;}
+.clearfloat {/* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;height:0;font-size:1px;line-height:0px;}
+#navigation {height:30px;background-color:#bb6;}
+.logo{width:293px;float:left;}
+
+
+#nav {width:100%;background-color:#333;font-family:"Century Gothic", "HelveticaNeueLT Pro 45 Lt", sans-serif;float:left;}
+#nav li {list-style:none;float:left;width:120px;height:30px;line-height:30px;text-align:center;} 
+#nav li a {color:white;text-decoration:none;display:block;} 
+#nav li a:hover {background-color:#066;} 
+#home .home a, #home .home a:hover,
+#tutorials .tutorials a, #tutorials .tutorials a:hover,
+#about .about a, #about .about a:hover,
+#contact .contact a, #contact .contact a:hover,
+#news .news a, #news .news a:hover {background-color:#FFF;color:#000;cursor:default;} 		
+#nav li ul {position:absolute;display:none;} 
+#nav li:hover ul {display:block;} 
+#nav li ul li {float:none;display:inline;}
+#nav li ul li a {width:118px;position:relative;border-left:1px solid black;border-right:1px solid black;border-bottom:1px solid black;background:#333;color:#fff;}
+#nav li ul li a:hover {background:#066;color:#000;}
+
+
+
+#rotator{width:463px;float:right;}
+div#rotator {position:relative;height:150px;}
+div#rotator ul{margin:0;padding:0;}
+div#rotator ul li {float:left;position:absolute;list-style: none;}
+div#rotator ul li img {padding: 0;}
+div#rotator ul li.show {z-index:500}
+
+
+.small-thumb{width:155px;height:145px;border:1px solid #bbb;padding:2px;background:#fff;float:left;margin-right:5px;margin-bottom:5px;}
+.facebook{margin-top:15px;}
+img.facebook:hover{opacity:0.8}
