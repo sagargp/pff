@@ -1,3 +1,13 @@
+<%
+  def nav_link_to(link, url, opts={})
+    if current_resource.url == url_for(url)
+      prefix = '<li class="active">'
+    else
+      prefix = '<li>'
+    end
+    prefix + link_to(link, url, opts) + '<span class="sr-only">(current)</span></li>'
+  end
+%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,22 +37,22 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="our-work-collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-                <li><a href="about.html">About</a></li>
+                <%= nav_link_to "Home", "/" %>
+                <%= nav_link_to "About", "about.html" %>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Our Work<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Breast Cancer Awareness, Patan, Gujarat May 2008</a></li>
-                    <li><a href="#">Breast Cancer Awareness, Patan, Gujarat Oct 2008</a></li>
-                    <li><a href="#">Cameroon, 2008</a></li>
-                    <li><a href="#">Health Screeings, Rural Gujarat 2009</a></li>
-                    <li><a href="#">Rotary, 2009-2010</a></li>
-                    <li><a href="#">Shamlaji, Gujarat, 2011</a></li>
-                    <li><a href="#">Disaster Preparedness, 2012</a></li>
-                    <li><a href="#">Walk with a Doc, 2013</a></li>
+                    <%= nav_link_to "Breast Cancer Awareness, Patan, Gujarat May 2008", "" %>
+                    <%= nav_link_to "Breast Cancer Awareness, Patan, Gujarat Oct 2008", "" %>
+                    <%= nav_link_to "Cameroon, 2008", "" %>
+                    <%= nav_link_to "Health Screeings, Rural Gujarat 2009", "" %>
+                    <%= nav_link_to "Rotary, 2009-2010", "" %>
+                    <%= nav_link_to "Shamlaji, Gujarat, 2011", "" %>
+                    <%= nav_link_to "Disaster Preparedness, 2012", "" %>
+                    <%= nav_link_to "Walk with a Doc, 2013", "" %>
                   </ul>
                 </li>
-                <li><a href="#">Partners</a></li>
+                <%= nav_link_to "Partners", "partners.html" %>
               </ul>
             </div>
           </div>
@@ -83,15 +93,21 @@
               Pandya Family Foundation<br/>
               555 W. Putnam Ave<br/>
               Porterville, CA 93257<br/>
-              <b>Tel:</b> (559) 782-8533<br/>
-              <b>Email:</b> <a href="mailto:elapandya@gmail.com">elapandya@gmail.com</a> 
+
+              <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+              (559) 782-8533<br/>
+
+              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+              <a href="mailto:elapandya@gmail.com">elapandya@gmail.com</a> 
             </div>
           </div>
         </div>
+
       </div>
     </div>
 
     <%= javascript_include_tag  "http://code.jquery.com/jquery-latest.js" %>
     <%= javascript_include_tag  "js/bootstrap.min.js" %>
+    <script src="http://imsky.github.com/holder/holder.js"></script>
   </body>
 </html>
